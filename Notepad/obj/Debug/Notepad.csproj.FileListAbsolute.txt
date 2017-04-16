@@ -1,0 +1,9 @@
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\bin\Debug\Notepad.exe.config
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\bin\Debug\Notepad.exe
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\bin\Debug\Notepad.pdb
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.csprojResolveAssemblyReference.cache
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.Cache
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.exe
+c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.pdb
