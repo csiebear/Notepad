@@ -53,7 +53,6 @@ namespace Notepad
 
         private void ToolStripMenuItem_17_Click(object sender, EventArgs e)
         {
-
         }
 
         private void ToolStripMenuItem_12_Click(object sender, EventArgs e)
@@ -93,6 +92,61 @@ namespace Notepad
                 writer.Dispose();
                 writer.Close();
             }
+        }
+
+        private void ToolStripMenuItem_206_Click(object sender, EventArgs e)
+        {
+            //click this button and then we set the richTextBox.Text to ""(means clearing the text)
+            richTextBox1.Text = "";
+        }
+
+        private void ToolStripMenuItem_18_Click(object sender, EventArgs e)
+        {
+            //click this button (exit) and then we call the application to exit for shutting down the program
+            Application.Exit();
+        }
+
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            //reference the https://msdn.microsoft.com/zh-tw/library/system.windows.forms.fontdialog.font(v=vs.110).aspx
+            fontDialog1.ShowColor = true;
+            //get the original setting in the richTextBox1
+            fontDialog1.Font = richTextBox1.Font;
+            fontDialog1.Color = richTextBox1.ForeColor;
+            //if user click confirm(not cancel),then we change the richTextBox1.text that the font become the font user choosen
+            //here we change "all" the richtextbox
+            if (fontDialog1.ShowDialog() != System.Windows.Forms.DialogResult.Cancel)
+            {
+                richTextBox1.Font = fontDialog1.Font;
+                richTextBox1.ForeColor = fontDialog1.Color;
+            }
+        }
+
+        private void ToolStripMenuItem_202_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.SelectedText != "")
+                richTextBox1.Cut();
+        }
+
+        private void ToolStripMenuItem_203_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.SelectedText != "")
+                richTextBox1.Copy();
+        }
+
+        private void ToolStripMenuItem_204_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste();
+        }
+
+        private void ToolStripMenuItem_201_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+
+        private void ToolStripMenuItem_205_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectedText = "";
         }
     }
 }
