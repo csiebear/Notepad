@@ -40,7 +40,41 @@ namespace Notepad
 
         private void ToolStripMenuItem_11_Click(object sender, EventArgs e)
         {
-
+            //If we open an file new(means the FileNameinTitle is not blank),and we want to open an new textbook
+            //
+            if (FileNameinTitle != "")
+            {
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                //Rename the title as 儲存檔案(Differentiate the dialog title from the 另存新檔)
+                saveFileDialog1.Title = "儲存檔案";
+                //Set the default name
+                saveFileDialog1.FileName = FileNameinTitle + ".txt";
+                saveFileDialog1.Filter = "Text File | *.txt";
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    StreamWriter writer = new StreamWriter(saveFileDialog1.OpenFile());
+                    writer.WriteLine(richTextBox1.Text);
+                    writer.Dispose();
+                    writer.Close();
+                    //We want to get the FileName like userdefinename.txt,so we want to process the FileName
+                    //Not correct: this.Text = "記事本:目前開啟檔案-"+saveFileDialog1.FileNames;
+                    FileNameinTitle = Path.GetFileName(saveFileDialog1.FileName);
+                    this.Text = "記事本-目前開啟檔案：" + FileNameinTitle;
+                }
+            }
+            else if(richTextBox1.Text != "")
+            {
+                if (MessageBox.Show("您將關閉清空目前記事本的內容開啟空白的記事本，若要儲存請按X離開，若選擇確認則清空記事本", "警告", MessageBoxButtons.OK) == System.Windows.Forms.DialogResult.OK)
+                {
+                    FileNameinTitle = "";
+                    richTextBox1.Text = "";
+                }
+            }
+            else 
+            {
+                //It must be blank but we clear the richtextbox again
+                richTextBox1.Text = "";
+            }
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -237,6 +271,34 @@ namespace Notepad
                 TSMI_205_Delete.Enabled = true;
                 TSMI_206_Clear.Enabled = true;
             }
+        }
+
+        private void TSMI212_DateTime_Click(object sender, EventArgs e)
+        {
+            //declare an Datetime variable to store the currnt time
+            DateTime localDate = DateTime.Now;
+            //then we transform the datetime to string and add it to the richTextBox
+            richTextBox1.Text += localDate.ToString();
+        }
+
+        private void TSMI_209_Replace_Click(object sender, EventArgs e)
+        {
+            Form ReplaceForm = new Replace();
+            ReplaceForm.Show();
+            if (ReplaceForm.DialogResult == System.Windows.Forms.DialogResult.Cancel)
+            {
+                ReplaceForm.Close();
+            }
+        }
+
+        private void TSMI_207_Find_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

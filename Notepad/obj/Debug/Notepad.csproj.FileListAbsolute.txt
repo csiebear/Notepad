@@ -7,3 +7,5 @@ c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\N
 c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.Cache
 c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.exe
 c:\users\mmlab\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.pdb
+C:\Users\mmlab\Documents\Visual Studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.Replace.resources
+C:\Users\mmlab\Documents\Visual Studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.Find.resources
