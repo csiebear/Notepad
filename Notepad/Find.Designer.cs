@@ -92,10 +92,11 @@
         }
 
         #endregion
-
+        
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button FindButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TargetText;
+        public static string ReturnTargetText;
     }
 }

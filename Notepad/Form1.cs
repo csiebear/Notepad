@@ -300,5 +300,11 @@ namespace Notepad
         {
            
         }
+
+        private void TSMI_207_Find_Click_1(object sender, EventArgs e)
+        {
+            Find FindDialog = new Find();
+            FindDialog.Show();
+        }
     }
 }
