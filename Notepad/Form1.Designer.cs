@@ -74,6 +74,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -158,6 +159,7 @@
             this.ToolStripMenuItem_15.Name = "ToolStripMenuItem_15";
             this.ToolStripMenuItem_15.Size = new System.Drawing.Size(235, 24);
             this.ToolStripMenuItem_15.Text = "版面設定";
+            this.ToolStripMenuItem_15.Click += new System.EventHandler(this.ToolStripMenuItem_15_Click);
             // 
             // toolStripMenuItem_16
             // 
@@ -357,7 +359,7 @@
             // 狀態列SToolStripMenuItem
             // 
             this.狀態列SToolStripMenuItem.Name = "狀態列SToolStripMenuItem";
-            this.狀態列SToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.狀態列SToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.狀態列SToolStripMenuItem.Text = "狀態列(S)";
             // 
             // toolStripDropDownButton5
@@ -397,8 +399,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(0, 28);
+            this.richTextBox1.Multiline = false;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(699, 333);
+            this.richTextBox1.Size = new System.Drawing.Size(658, 333);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -497,6 +500,10 @@
         public static string target;
         public static string replace;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        //the public variable for storing the FilePosition
+        public string OpenedFileName;
+        private System.Drawing.Printing.PrintDocument document =  new System.Drawing.Printing.PrintDocument();
     }
 }
 
